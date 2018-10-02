@@ -11,3 +11,7 @@ Airport.prototype.planes = function(){
 Airport.prototype.okToLand = function(plane){
   this.landedPlanes.push(plane);
 };
+
+Airport.prototype.okToTakeoff = function(plane) {
+  this.landedPlanes = [];
+};

@@ -17,4 +17,10 @@ describe('Airport',function(){
     airport.okToLand(plane);
     expect(airport.planes()).toEqual([plane]);
   });
+
+  it('removes plane from landed planes when it is ok to take off', function(){
+    airport.okToLand(plane);
+    airport.okToTakeoff(plane);
+    expect(airport.planes()).toEqual([]);
+  });
 });
